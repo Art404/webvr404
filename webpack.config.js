@@ -14,6 +14,11 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.js$/,
+        loader: 'babel',
+        exclude: /node_modules/,
+      },
+      {
         test: /\.css$/,
         loader: loadCSS.extract('style', 'css'),
         exclude: /node_modules/
